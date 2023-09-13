@@ -11,16 +11,31 @@ const HeaderSection = () => {
       },
     },
   };
+
+  const textVariants = {
+    initial: {},
+    animate: {
+      textShadow:
+        "0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000",
+      color: "#fff6a9",
+    },
+  };
+
   return (
-    <div className="w-full md:w-2/3 border-2 border-red-800 px-2">
-      <div className="border-2 border-purple-500 flex flex-col py-2">
+    <div className="w-full  md:w-2/3  px-2">
+      <div className=" flex flex-col py-2">
         <div className="text-center space-y-2 md:text-start md:pl-24">
           <h3 className="text-lg text-orange-400 md:text-xl">
             Hi there , I am
           </h3>
-          <h1 className="text-2xl bg-gradient-to-r from-rose-500 to-white bg-clip-text text-transparent underline decoration-pink-500 md:text-5xl">
+          <motion.h1
+            className="text-2xl md:text-5xl"
+            initial="initial"
+            animate="animate"
+            variants={textVariants}
+          >
             Saba Giorkhelidze
-          </h1>
+          </motion.h1>
           <h1 className="text-2xl md:text-5xl text-slate-600">
             I make Awesome Websites
           </h1>

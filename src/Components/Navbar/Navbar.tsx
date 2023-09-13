@@ -6,17 +6,19 @@ const Navbar = () => {
     <header className="bg-transparent fixed z-50 top-0 left-0 w-full transition duration-500">
       <nav className="flex items-center max-w-screen-xl mx-auto px-6 py-3">
         {/* left  */}
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          className="mx-8 my-1 cursor-pointer"
-        >
-          Portfolio
-        </motion.div>
+        <Link to={"/"}>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            className="mx-8 my-1 cursor-pointer"
+          >
+            Saba Giorkhelidze
+          </motion.div>
+        </Link>
         <div className="flex flex-grow"></div>
         {/* right  */}
-        <Link to={"/"}>
+        <Link to={"/about"}>
           <motion.div whileHover={{ scale: 1.1 }} className="mx-4 my-1 ">
-            Add Post
+            About
           </motion.div>
         </Link>
         <Link to={"/accountSettings"}>
