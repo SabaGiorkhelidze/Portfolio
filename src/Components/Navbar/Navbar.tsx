@@ -5,7 +5,6 @@ const Navbar = () => {
   return (
     <header className="bg-transparent fixed z-50 top-0 left-0 w-full transition duration-500">
       <nav className="flex items-center max-w-screen-xl mx-auto px-6 py-3">
-        {/* left  */}
         <Link to={"/"}>
           <motion.div
             whileHover={{ scale: 1.1 }}
@@ -21,9 +20,9 @@ const Navbar = () => {
             About
           </motion.div>
         </Link>
-        <Link to={"/accountSettings"}>
+        <Link to={"/projects"}>
           <motion.div whileHover={{ scale: 1.1 }} className="mx-6 my-1">
-            Account
+            Projects
           </motion.div>
         </Link>
       </nav>

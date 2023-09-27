@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import CircularMenuItem from "./CircularMenuItem";
-
 type CircularMenuProps = {
   items: Array<[string, string]>;
+  icon: ReactElement;
 };
 
-const CircularMenu: React.FC<CircularMenuProps> = ({ items }) => {
+const CircularMenu: React.FC<CircularMenuProps> = ({ items, icon }) => {
   const rotation = 360 / items.length;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,9 @@ const CircularMenu: React.FC<CircularMenuProps> = ({ items }) => {
 
   return (
     <div className="circular-menu">
-      <div className="menu-button" onClick={handleSetIsOpen}></div>
+      <div className="menu-button flex justify-center items-center" onClick={handleSetIsOpen}>
+        {icon}
+      </div>
       {items.map(([page, color], index) => (
         <CircularMenuItem
           key={index}

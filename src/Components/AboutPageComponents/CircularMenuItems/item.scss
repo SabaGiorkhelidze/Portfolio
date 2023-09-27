@@ -1,0 +1,51 @@
+$large-space: 81px;
+$small-space: 60px;
+
+.circular-menu {
+  height: 80px;
+  position: relative;
+  width: 80px;
+  margin: 80px;
+}
+
+.menu-button,
+.menu-item {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.menu-button {
+  background-color: black;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  cursor: pointer;
+
+  &:active {
+    background-color: #3e84e6;
+  }
+}
+
+.menu-item {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  transition: transform 500ms ease;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    scale: (1.03);
+  }
+}
+@media screen and (max-width: 767px) {
+  .circular-menu {
+    height: $small-space;
+    width: $small-space;
+    font-size: 12px;
+  }
+}
